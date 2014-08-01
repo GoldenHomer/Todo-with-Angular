@@ -7,7 +7,7 @@
 			<h2>Todos</h2>
 			<ul ng-repeat="todo in todos track by $index">
 				<li>{{todo}}</li>
-				<button>Done</button>
+				<button ng-click="done(todo)">Done</button>
 			</ul>
 		</div>
 

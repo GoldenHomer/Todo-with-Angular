@@ -5,4 +5,11 @@ app.controller('TodoCtrl', function($scope){
 	$scope.todos = ['Learn to play a 12 stringer',
 					'Go to Japan for 2020 Olympics',
 					'Get a good job!'];
+
+	$scope.done = function(todo) {
+		var indexOf = $scope.todos.indexOf(todo); //Make sure we are calling the right todo.
+		if (indexOf !== -1){
+			$scope.todos.splice(indexOf, 1);
+		}
+	}
 });
