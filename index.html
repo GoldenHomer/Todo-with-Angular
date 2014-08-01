@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body ng-app="Todo">
-		<div ng-controller="TodoCtrl">
+		<div class="page-container" ng-controller="TodoCtrl">
 			<h2>Todos</h2>
-			<ul ng-repeat="todo in todos track by $index">
+			<ul class="todo-list" ng-repeat="todo in todos track by $index">
 				<li>{{todo}}</li>
-				<button ng-click="done(todo)">Done</button>
+				<button class="bt bt-achieve" ng-click="done(todo)">Done</button>
 			</ul>
 		</div>
 
-	<ul>
+	<ul class="add-todo">
 		<li>
-			<input type="text" placeholder="New Todo" ng-model="newTodo" ng-keyup="add($event)" />
+			<input type="text" class="txt"placeholder="New Todo" ng-model="newTodo" ng-keyup="add($event)" />
 		</li>
 	</ul>
 

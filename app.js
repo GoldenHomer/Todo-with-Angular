@@ -14,6 +14,7 @@ app.controller('TodoCtrl', function($scope){
 	}
 
 	$scope.add = function(e){
+		// e shorthand for event.
 		if(e.which && e.which === 13){
 			$scope.todos.push($scope.newTodo);
 			$scope.newTodo = '';
